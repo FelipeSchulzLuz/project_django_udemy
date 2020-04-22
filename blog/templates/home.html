@@ -9,12 +9,14 @@
             <div class="card mt-5 shadow rounded">
                 <div class='card-body'>
                     <h5 class="card-title">{{postagem.titulo}}</h5>
-                    <i>{{postagem.data_criacao}} - Autor: {{postagem.autor.username}}</i>
+                    <i>{{postagem.data_criacao}}</i>
+                    <br>
+                    <b>Autor: {{postagem.autor.username}}</b>
 
                     <p class="card-text mt-2">{{postagem.texto}}</p>
 
                     <a href="{% url 'detalhe_post' pk=postagem.pk %}" class="btn btn-primary">Saber Mais</a>
-                    
+
                 </div>
             </div>
             {% endfor %}
