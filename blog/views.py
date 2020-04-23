@@ -38,7 +38,7 @@ def adicionar_postagem(request):
 
 def edit_postagem(request, pk):
     postagem = get_object_or_404(Postagem, pk=pk)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = PostForm(request.POST, instance=postagem)
         if form.is_valid():
             postagem = form.save(commit=False)

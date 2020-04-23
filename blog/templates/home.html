@@ -8,7 +8,7 @@
             {% for postagem in postagens %}
             <div class="card mt-5 shadow rounded">
                 <div class='card-body'>
-                    <h5 class="card-title">{{postagem.titulo}}</h5>
+                    <h5 class="card-title"><a href="{% url 'edicao_postagem' pk=postagem.pk %}">{{ postagem.titulo }}</a></h5>
                     <i>{{postagem.data_criacao}}</i>
                     <br>
                     <b>Autor: {{postagem.autor.username}}</b>
